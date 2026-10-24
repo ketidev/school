@@ -1,17 +1,10 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [FormsModule],
+  imports: [RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  title: string = 'First Angular Code';
-  studentName: string = '';
-
-  addStudent(): void {
-    console.log('Add Student');
-  }
-}
+export class App {}
