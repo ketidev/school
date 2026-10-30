@@ -8,6 +8,7 @@ export const routes: Routes = [
   },
   {
     path: 'students',
-    loadComponent: () => import('./list/list/list').then((m) => m.List),
+    loadComponent: () =>
+      import('./student-module/student-list/student-list').then((m) => m.StudentList),
   },
 ];

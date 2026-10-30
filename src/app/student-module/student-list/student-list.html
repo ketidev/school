@@ -1,0 +1,131 @@
+<main class="min-h-screen bg-gray-100 p-8">
+  <section class="mx-auto max-w-lg rounded-2xl bg-white p-6 shadow-lg">
+    <header>
+      <h1 class="mb-2 text-2xl font-bold text-gray-800">
+        {{ title }}
+      </h1>
+
+      <p class="mb-6 text-gray-500">Students: {{ students.length }}</p>
+    </header>
+
+    <!-- <div class="mb-6 flex gap-2">
+      <input
+        type="text"
+        [(ngModel)]="studentName"
+        placeholder="Enter student name"
+        class="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+
+      <button
+        (click)="addStudent()"
+        class="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+      >
+        Add
+      </button>
+    </div> -->
+    <app-add-student-form></app-add-student-form>
+
+    <!-- <section aria-labelledby="students-heading">
+      <h2 id="students-heading" class="mb-3 text-lg font-semibold text-gray-700">Student List</h2>
+
+      <ul class="space-y-2">
+        @for (student of students; track $index) {
+          <li class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+            <span>{{ student }}</span>
+
+            <button
+              type="button"
+              (click)="confirmDelete($index)"
+              class="rounded-lg p-2 text-red-500 hover:bg-red-50"
+              aria-label="Delete student"
+              title="Delete"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 6h18" />
+                <path d="M8 6V4h8v2" />
+                <path d="m19 6-1 14H6L5 6" />
+                <path d="M10 11v5" />
+                <path d="M14 11v5" />
+              </svg>
+            </button>
+          </li>
+        } @empty {
+          <li class="text-gray-400">No students yet.</li>
+        }
+      </ul>
+    </section>
+
+    @if (selectedIndex != null) {
+      <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+        <section
+          class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl"
+          role="alertdialog"
+          aria-modal="true"
+          aria-labelledby="delete-title"
+          aria-describedby="delete-description"
+        >
+          <header class="mb-4 flex justify-center">
+            <div class="rounded-full bg-red-100 p-3 text-red-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 6h18" />
+                <path d="M8 6V4h8v2" />
+                <path d="m19 6-1 14H6L5 6" />
+                <path d="M10 11v5" />
+                <path d="M14 11v5" />
+              </svg>
+            </div>
+          </header>
+
+          <h2 id="delete-title" class="mb-2 text-center text-xl font-bold text-gray-800">
+            Delete student?
+          </h2>
+
+          <p id="delete-description" class="mb-6 text-center text-sm text-gray-500">
+            Are you sure you want to delete
+            {{ students[selectedIndex] }}
+          </p>
+
+          <footer class="flex justify-center gap-3">
+            <button
+              type="button"
+              (click)="cancelDelete()"
+              class="rounded-lg border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-100"
+            >
+              Cancel
+            </button>
+
+            <button
+              type="button"
+              (click)="removeStudent()"
+              class="rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+            >
+              Confirm
+            </button>
+          </footer>
+        </section>
+      </div>
+    } -->
+  </section>
+</main>
