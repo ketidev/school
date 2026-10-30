@@ -8,22 +8,7 @@
       <p class="mb-6 text-gray-500">Students: {{ students.length }}</p>
     </header>
 
-    <!-- <div class="mb-6 flex gap-2">
-      <input
-        type="text"
-        [(ngModel)]="studentName"
-        placeholder="Enter student name"
-        class="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
-      />
-
-      <button
-        (click)="addStudent()"
-        class="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-      >
-        Add
-      </button>
-    </div> -->
-    <app-add-student-form></app-add-student-form>
+    <app-add-student-form (addStudent)="addStudent($event)"></app-add-student-form>
 
     <!-- <section aria-labelledby="students-heading">
       <h2 id="students-heading" class="mb-3 text-lg font-semibold text-gray-700">Student List</h2>

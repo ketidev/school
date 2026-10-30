@@ -15,12 +15,10 @@ export class StudentList {
   students: string[] = ['John Doe', 'Jane Smith', 'Alice Johnson', 'Bob Brown'];
   selectedIndex: number | null = null;
 
-  addStudent(): void {
-    if (this.studentName.trim() != '') {
-      this.students.push(this.studentName);
-      this.studentName = '';
-      this.count = this.students.length;
-    }
+  addStudent(name: string): void {
+    this.students.push(name);
+    this.count = this.students.length;
+    console.log(this.count, this.students);
   }
 
   confirmDelete(index: number): void {
