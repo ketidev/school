@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { AddStudentForm } from '../add-student-form/add-student-form';
+import { StudentItem } from '../student-item/student-item';
 
 @Component({
-  imports: [AddStudentForm],
+  imports: [AddStudentForm, StudentItem],
   selector: 'app-student-list',
   styleUrl: './student-list.css',
   templateUrl: './student-list.html',
 })
 export class StudentList {
   title: string = 'First Angular Code';
-  studentName: string = '';
 
   count: number = 0;
   students: string[] = ['John Doe', 'Jane Smith', 'Alice Johnson', 'Bob Brown'];
@@ -18,7 +18,6 @@ export class StudentList {
   addStudent(name: string): void {
     this.students.push(name);
     this.count = this.students.length;
-    console.log(this.count, this.students);
   }
 
   confirmDelete(index: number): void {

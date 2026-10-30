@@ -14,7 +14,6 @@ export class AddStudentForm {
   onAddStudent(): void {
     const name = this.studentName.trim();
 
-    console.log(name, 'name');
     if (!name) return;
 
     this.addStudent.emit(name);

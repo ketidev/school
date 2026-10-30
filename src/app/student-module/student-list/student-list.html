@@ -10,41 +10,15 @@
 
     <app-add-student-form (addStudent)="addStudent($event)"></app-add-student-form>
 
-    <!-- <section aria-labelledby="students-heading">
+    <section aria-labelledby="students-heading">
       <h2 id="students-heading" class="mb-3 text-lg font-semibold text-gray-700">Student List</h2>
 
       <ul class="space-y-2">
         @for (student of students; track $index) {
-          <li class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
-            <span>{{ student }}</span>
-
-            <button
-              type="button"
-              (click)="confirmDelete($index)"
-              class="rounded-lg p-2 text-red-500 hover:bg-red-50"
-              aria-label="Delete student"
-              title="Delete"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M3 6h18" />
-                <path d="M8 6V4h8v2" />
-                <path d="m19 6-1 14H6L5 6" />
-                <path d="M10 11v5" />
-                <path d="M14 11v5" />
-              </svg>
-            </button>
-          </li>
+          <app-student-item
+            [student]="student"
+            (deleteStudent)="confirmDelete($index)"
+          ></app-student-item>
         } @empty {
           <li class="text-gray-400">No students yet.</li>
         }
@@ -111,6 +85,6 @@
           </footer>
         </section>
       </div>
-    } -->
+    }
   </section>
 </main>
